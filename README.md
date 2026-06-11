@@ -1,4 +1,4 @@
-# Fractales du Destin — Jeu interactif 
+# Fractales du Destin - Jeu interactif 
 
 Application locale, **distincte du skill** (`fractales-du-destin/references/` reste le domaine du skill Claude).
 Implémente le **pipeline trans-échelle complet en 6 étapes** : l'application est l'orchestrateur
