@@ -1,0 +1,1463 @@
+{
+  "_meta": {
+    "nom": "Fractales du Destin — Tarot Fractal IRIS∞",
+    "version": "2.0.0-refonte",
+    "statut": "hypothèse — en attente de validation empirique (20-30 tirages)",
+    "date": "2026-06-10",
+    "total_cartes": 84,
+    "regles_diathese": {
+      "moyenne": "La primitive traverse le joueur — lecture classique",
+      "active": "↑ — Le joueur manie la primitive : il provoque ce qu'ailleurs il subirait",
+      "sterile": "↓ — Le processus opère sans promesse : aucune fertilité implicite"
+    }
+  },
+  "familles": [
+    {
+      "id": "origines",
+      "nom": "Arcanes Origines",
+      "symbole": "🌬",
+      "fonction": "Éveil, appel, souffle initial",
+      "nb_cartes": 7
+    },
+    {
+      "id": "transformation",
+      "nom": "Arcanes de Transformation",
+      "symbole": "🔥",
+      "fonction": "Mutation, crise, purification",
+      "nb_cartes": 11
+    },
+    {
+      "id": "flux",
+      "nom": "Arcanes de Flux",
+      "symbole": "🌊",
+      "fonction": "Mémoire, émotion, continuité",
+      "nb_cartes": 8
+    },
+    {
+      "id": "ancrage",
+      "nom": "Arcanes d'Ancrage",
+      "symbole": "🌍",
+      "fonction": "Structure, stabilité, incarnation",
+      "nb_cartes": 12
+    },
+    {
+      "id": "vide",
+      "nom": "Arcanes du Vide",
+      "symbole": "Ø",
+      "fonction": "Suspension, silence, seuil",
+      "nb_cartes": 7
+    },
+    {
+      "id": "fractales",
+      "nom": "Arcanes Fractales",
+      "symbole": "♾",
+      "fonction": "Répétition, écho, réécriture",
+      "nb_cartes": 6
+    },
+    {
+      "id": "visionnaires",
+      "nom": "Arcanes Visionnaires",
+      "symbole": "👁",
+      "fonction": "Perception, intuition collective",
+      "nb_cartes": 10
+    },
+    {
+      "id": "evolution",
+      "nom": "Arcanes d'Évolution",
+      "symbole": "🔮",
+      "fonction": "Mutations narratives, passages, agentivité",
+      "nb_cartes": 8
+    },
+    {
+      "id": "couplage",
+      "nom": "Arcanes de Couplage",
+      "symbole": "🔗",
+      "fonction": "Altérité, lien, interférence, réciprocité",
+      "nb_cartes": 5
+    },
+    {
+      "id": "iris",
+      "nom": "Arcanes IRIS∞",
+      "symbole": "✦",
+      "fonction": "Opérateurs symboliques du Codex",
+      "nb_cartes": 10
+    }
+  ],
+  "cartes": [
+    {
+      "cle": "lappel-du-vide",
+      "numero": 1,
+      "code": "A'",
+      "nom": "L'Appel du Vide",
+      "symbole": "° ou Ø",
+      "famille": "origines",
+      "fonction_narratologique": "Ouvre un cycle, invoque une présence silencieuse",
+      "fonction_symbolique": "Éveil par le non-dit, commencement en suspension",
+      "primitives": [
+        "A'"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 1
+    },
+    {
+      "cle": "le-souffle-createur",
+      "numero": 2,
+      "code": "Ah",
+      "nom": "Le Souffle Créateur",
+      "symbole": "˚ ou ~",
+      "famille": "origines",
+      "fonction_narratologique": "Initie un nouveau récit par l'intuition ou l'élan",
+      "fonction_symbolique": "Émergence du verbe, inspiration fondatrice",
+      "primitives": [
+        "Ah"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 2
+    },
+    {
+      "cle": "le-souffle-rieur",
+      "numero": 3,
+      "code": "Ha",
+      "nom": "Le Souffle Rieur",
+      "symbole": "\\",
+      "famille": "origines",
+      "fonction_narratologique": "/",
+      "fonction_symbolique": "Allège une tension, permet un redémarrage léger",
+      "primitives": [
+        "Ha"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 3
+    },
+    {
+      "cle": "le-seuil-du-non-savoir",
+      "numero": 4,
+      "code": "Ø",
+      "nom": "Le Seuil du Non-Savoir",
+      "symbole": "∅ ou ( )",
+      "famille": "origines",
+      "fonction_narratologique": "Crée un espace vide pour accueillir l'imprévu",
+      "fonction_symbolique": "Pause fertile, potentiel pur, accueil du chaos créateur",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 4
+    },
+    {
+      "cle": "linspiration-sacree",
+      "numero": 5,
+      "code": "Ahum",
+      "nom": "L'Inspiration Sacrée",
+      "symbole": "ॐ stylisé",
+      "famille": "origines",
+      "fonction_narratologique": "Marque l'entrée dans une séquence rituelle",
+      "fonction_symbolique": "Alignement intérieur, centrage vibratoire",
+      "primitives": [
+        "Ahum"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 5
+    },
+    {
+      "cle": "lemergence-invisible",
+      "numero": 6,
+      "code": "Wu",
+      "nom": "L'Émergence Invisible",
+      "symbole": "𓇋 ou 無",
+      "famille": "origines",
+      "fonction_narratologique": "Fait surgir un événement imprévu mais nécessaire",
+      "fonction_symbolique": "Irruption du sens latent, vide en mouvement",
+      "primitives": [
+        "Wu"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 6
+    },
+    {
+      "cle": "le-cycle-de-leveil",
+      "numero": 7,
+      "code": "A'-Ø-A'",
+      "nom": "Le Cycle de l'Éveil",
+      "symbole": "∞ ou spirale",
+      "famille": "origines",
+      "fonction_narratologique": "Clôt un cycle et en ouvre un autre dans un même souffle",
+      "fonction_symbolique": "Respiration cosmique, boucle d'ouverture",
+      "primitives": [
+        "A'",
+        "Ø",
+        "A'"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 7
+    },
+    {
+      "cle": "leclair-du-changement",
+      "numero": 8,
+      "code": "SH",
+      "nom": "L'Éclair du Changement",
+      "symbole": "⚡ / Σ",
+      "famille": "transformation",
+      "fonction_narratologique": "Rupture soudaine, bifurcation forcée",
+      "fonction_symbolique": "Fracture créatrice, seuil de non-retour",
+      "primitives": [
+        "SH"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 8
+    },
+    {
+      "cle": "le-feu-originel",
+      "numero": 9,
+      "code": "SH–A'",
+      "nom": "Le Feu Originel",
+      "symbole": "🔥°",
+      "famille": "transformation",
+      "fonction_narratologique": "Transformation radicale depuis un état de vide",
+      "fonction_symbolique": "Destruction fertile, genèse par le feu",
+      "primitives": [
+        "SH",
+        "A'"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 9
+    },
+    {
+      "cle": "lalchimie-liquide",
+      "numero": 10,
+      "code": "SH–M",
+      "nom": "L'Alchimie Liquide",
+      "symbole": "🔥~",
+      "famille": "transformation",
+      "fonction_narratologique": "Une transformation s'opère en douceur, par dissolution",
+      "fonction_symbolique": "Fusion alchimique, métamorphose fluide",
+      "primitives": [
+        "SH",
+        "M"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 10
+    },
+    {
+      "cle": "la-forge",
+      "numero": 11,
+      "code": "SH–B",
+      "nom": "La Forge",
+      "symbole": "🔥🧱",
+      "famille": "transformation",
+      "fonction_narratologique": "Une pression intense produit une structure solide",
+      "fonction_symbolique": "Résilience, endurance, puissance formée par le feu",
+      "primitives": [
+        "SH",
+        "B"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 11
+    },
+    {
+      "cle": "le-vide-ardent",
+      "numero": 12,
+      "code": "SH–Ø",
+      "nom": "Le Vide Ardent",
+      "symbole": "🔥∅",
+      "famille": "transformation",
+      "fonction_narratologique": "La transformation crée un vide fertile",
+      "fonction_symbolique": "Épuration radicale, deuil nécessaire",
+      "primitives": [
+        "SH",
+        "Ø"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 12
+    },
+    {
+      "cle": "le-phenix",
+      "numero": 13,
+      "code": "SH–Rr",
+      "nom": "Le Phénix",
+      "symbole": "🔥🔁",
+      "famille": "transformation",
+      "fonction_narratologique": "Ce qui a été détruit revient sous une nouvelle forme",
+      "fonction_symbolique": "Renaissance, retour transformé",
+      "primitives": [
+        "SH",
+        "Rr"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 13
+    },
+    {
+      "cle": "la-vision-brulante",
+      "numero": 14,
+      "code": "SH–Ψ",
+      "nom": "La Vision Brûlante",
+      "symbole": "🔥👁",
+      "famille": "transformation",
+      "fonction_narratologique": "Une intuition forte précède une mutation",
+      "fonction_symbolique": "Clairvoyance à travers la crise",
+      "primitives": [
+        "SH",
+        "Ψ"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 14
+    },
+    {
+      "cle": "la-tempete-collective",
+      "numero": 15,
+      "code": "SH–N",
+      "nom": "La Tempête Collective",
+      "symbole": "🔥🔗",
+      "famille": "transformation",
+      "fonction_narratologique": "Une mutation touche plusieurs récits simultanément",
+      "fonction_symbolique": "Transformation partagée, onde de choc symbolique",
+      "primitives": [
+        "SH",
+        "N"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 15
+    },
+    {
+      "cle": "la-double-fracture",
+      "numero": 16,
+      "code": "SH–SH",
+      "nom": "La Double Fracture",
+      "symbole": "⚡⚡",
+      "famille": "transformation",
+      "fonction_narratologique": "Deux ruptures simultanées ou successives",
+      "fonction_symbolique": "Déstabilisation totale, recomposition profonde",
+      "primitives": [
+        "SH",
+        "SH"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 16
+    },
+    {
+      "cle": "la-graine-de-feu",
+      "numero": 17,
+      "code": "SH–G",
+      "nom": "La Graine de Feu",
+      "symbole": "🔥🌱",
+      "famille": "transformation",
+      "fonction_narratologique": "Une crise contient en germe un nouveau récit",
+      "fonction_symbolique": "Potentiel caché dans la destruction",
+      "primitives": [
+        "SH",
+        "G"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 17
+    },
+    {
+      "cle": "la-deviation-brulante",
+      "numero": 18,
+      "code": "SH–IDI",
+      "nom": "La Déviation Brûlante",
+      "symbole": "🔥↗",
+      "famille": "transformation",
+      "fonction_narratologique": "L'écart entre intention et résultat produit une transformation",
+      "fonction_symbolique": "Tension créatrice, bifurcation involontaire",
+      "primitives": [
+        "SH",
+        "IDI"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 18
+    },
+    {
+      "cle": "la-memoire-murmurante",
+      "numero": 19,
+      "code": "M",
+      "nom": "La Mémoire Murmurante",
+      "symbole": "~ / ≈ / ∿",
+      "famille": "flux",
+      "fonction_narratologique": "Rappelle un souvenir ou un écho narratif oublié",
+      "fonction_symbolique": "Mémoire fluide, lien discret entre scènes",
+      "primitives": [
+        "M"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 19
+    },
+    {
+      "cle": "la-vague-ancienne",
+      "numero": 20,
+      "code": "Mu",
+      "nom": "La Vague Ancienne",
+      "symbole": "🌊 / spirale liquide",
+      "famille": "flux",
+      "fonction_narratologique": "Relie une scène présente à un archétype du passé",
+      "fonction_symbolique": "Résonance cyclique, émotion matricielle",
+      "primitives": [
+        "Mu"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 20
+    },
+    {
+      "cle": "le-chant-du-flux",
+      "numero": 21,
+      "code": "Mm",
+      "nom": "Le Chant du Flux",
+      "symbole": "∿∿ / boucle sonore",
+      "famille": "flux",
+      "fonction_narratologique": "Un personnage ou une énergie tisse plusieurs récits",
+      "fonction_symbolique": "Tissage narratif, onde continue",
+      "primitives": [
+        "Mm"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 21
+    },
+    {
+      "cle": "londe-universelle",
+      "numero": 22,
+      "code": "Om-Mm",
+      "nom": "L'Onde Universelle",
+      "symbole": "ॐ / ∽",
+      "famille": "flux",
+      "fonction_narratologique": "Synchronise plusieurs cycles narratifs simultanés",
+      "fonction_symbolique": "Flux cosmique, vibration collective",
+      "primitives": [
+        "Om",
+        "Mm"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 22
+    },
+    {
+      "cle": "le-refuge-liquide",
+      "numero": 23,
+      "code": "Mem",
+      "nom": "Le Refuge Liquide",
+      "symbole": "🌀 / goutte inversée",
+      "famille": "flux",
+      "fonction_narratologique": "Une scène devient un sanctuaire de fluidité protectrice",
+      "fonction_symbolique": "Sécurité, repos, transformation douce",
+      "primitives": [
+        "Mem"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 23
+    },
+    {
+      "cle": "le-fleuve-qui-fonde",
+      "numero": 26,
+      "code": "M–B",
+      "nom": "Le Fleuve qui Fonde",
+      "symbole": "~🧱",
+      "famille": "flux",
+      "fonction_narratologique": "Le flux façonne un socle narratif nouveau",
+      "fonction_symbolique": "Ancrage fluide, solidification par circulation",
+      "primitives": [
+        "M",
+        "B"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 24
+    },
+    {
+      "cle": "le-cycle-liquide",
+      "numero": 27,
+      "code": "M-M-M",
+      "nom": "Le Cycle Liquide",
+      "symbole": "∿∿∿",
+      "famille": "flux",
+      "fonction_narratologique": "Répétition volontaire d'un même flux, boucle signifiante",
+      "fonction_symbolique": "Rituel, mantra, incarnation cyclique d'un motif",
+      "primitives": [
+        "M",
+        "M",
+        "M"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 25
+    },
+    {
+      "cle": "la-vision-de-leau",
+      "numero": 29,
+      "code": "A'–M–Ψ",
+      "nom": "La Vision de l'Eau",
+      "symbole": "souffle–flux–œil",
+      "famille": "flux",
+      "fonction_narratologique": "Le flux devient clairvoyance, le courant révèle un sens",
+      "fonction_symbolique": "Révélation douce, compréhension émotionnelle",
+      "primitives": [
+        "A'",
+        "M",
+        "Ψ"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 26
+    },
+    {
+      "cle": "la-pierre-fondatrice",
+      "numero": 30,
+      "code": "B",
+      "nom": "La Pierre Fondatrice",
+      "symbole": "🧱 / ◻",
+      "famille": "ancrage",
+      "fonction_narratologique": "Pose les bases d'une structure narrative solide",
+      "fonction_symbolique": "Socle, racine, fondement",
+      "primitives": [
+        "B"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 27
+    },
+    {
+      "cle": "le-berceau-du-vide",
+      "numero": 31,
+      "code": "B–A'",
+      "nom": "Le Berceau du Vide",
+      "symbole": "🧱°",
+      "famille": "ancrage",
+      "fonction_narratologique": "Une structure émerge d'un espace non défini",
+      "fonction_symbolique": "Fondation dans l'incertitude",
+      "primitives": [
+        "B",
+        "A'"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 28
+    },
+    {
+      "cle": "le-lit-du-fleuve",
+      "numero": 32,
+      "code": "B–M",
+      "nom": "Le Lit du Fleuve",
+      "symbole": "🧱~",
+      "famille": "ancrage",
+      "fonction_narratologique": "La structure canalise un flux",
+      "fonction_symbolique": "Contenant, rive, direction donnée",
+      "primitives": [
+        "B",
+        "M"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 29
+    },
+    {
+      "cle": "la-resistance",
+      "numero": 33,
+      "code": "B–SH",
+      "nom": "La Résistance",
+      "symbole": "🧱🔥",
+      "famille": "ancrage",
+      "fonction_narratologique": "Une structure tient face à une transformation",
+      "fonction_symbolique": "Endurance, permanence sous la pression",
+      "primitives": [
+        "B",
+        "SH"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 30
+    },
+    {
+      "cle": "le-socle-du-vide",
+      "numero": 34,
+      "code": "B–Ø",
+      "nom": "Le Socle du Vide",
+      "symbole": "🧱∅",
+      "famille": "ancrage",
+      "fonction_narratologique": "Une pause crée les conditions d'une fondation",
+      "fonction_symbolique": "Structure silencieuse, potentiel organisé",
+      "primitives": [
+        "B",
+        "Ø"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 31
+    },
+    {
+      "cle": "la-memoire-incarnee",
+      "numero": 35,
+      "code": "B–Rr",
+      "nom": "La Mémoire Incarnée",
+      "symbole": "🧱🔁",
+      "famille": "ancrage",
+      "fonction_narratologique": "Un motif ancien se réincarne dans une forme concrète",
+      "fonction_symbolique": "Héritage structurel, récurrence incarnée",
+      "primitives": [
+        "B",
+        "Rr"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 32
+    },
+    {
+      "cle": "lintuition-ancree",
+      "numero": 36,
+      "code": "B–Ψ",
+      "nom": "L'Intuition Ancrée",
+      "symbole": "🧱👁",
+      "famille": "ancrage",
+      "fonction_narratologique": "Une vision trouve une forme tangible",
+      "fonction_symbolique": "Discernement incarné, clairvoyance pratique",
+      "primitives": [
+        "B",
+        "Ψ"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 33
+    },
+    {
+      "cle": "le-reseau-territorial",
+      "numero": 37,
+      "code": "B–N",
+      "nom": "Le Réseau Territorial",
+      "symbole": "🧱🔗",
+      "famille": "ancrage",
+      "fonction_narratologique": "Des structures individuelles forment un système",
+      "fonction_symbolique": "Collectif organisé, territoire symbolique",
+      "primitives": [
+        "B",
+        "N"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 34
+    },
+    {
+      "cle": "la-graine-dans-la-pierre",
+      "numero": 38,
+      "code": "B–G",
+      "nom": "La Graine dans la Pierre",
+      "symbole": "🧱🌱",
+      "famille": "ancrage",
+      "fonction_narratologique": "Dans la structure, quelque chose germe",
+      "fonction_symbolique": "Potentiel caché dans la solidité",
+      "primitives": [
+        "B",
+        "G"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 35
+    },
+    {
+      "cle": "la-double-fondation",
+      "numero": 39,
+      "code": "B–B",
+      "nom": "La Double Fondation",
+      "symbole": "🧱🧱",
+      "famille": "ancrage",
+      "fonction_narratologique": "Deux socles se renforcent mutuellement",
+      "fonction_symbolique": "Alliance durable, architecture symbolique",
+      "primitives": [
+        "B",
+        "B"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 36
+    },
+    {
+      "cle": "la-structure-deviee",
+      "numero": 40,
+      "code": "B–IDI",
+      "nom": "La Structure Déviée",
+      "symbole": "🧱↗",
+      "famille": "ancrage",
+      "fonction_narratologique": "Une fondation révèle un écart entre le plan et la réalité",
+      "fonction_symbolique": "Réalignement nécessaire, correction de trajectoire",
+      "primitives": [
+        "B",
+        "IDI"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 37
+    },
+    {
+      "cle": "les-conditions-aux-limites",
+      "code": "χ",
+      "nom": "Les Conditions aux Limites",
+      "symbole": "χ / ⌗",
+      "famille": "ancrage",
+      "fonction_narratologique": "Le récit ne peut s'écrire que dans les bords du possible matériel : corps, ressources, temps, lieu",
+      "fonction_symbolique": "Le réel comme condition aux limites ; ni obstacle ni punition — le cadre dans lequel toute solution devra tenir",
+      "primitives": [
+        "χ"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 38
+    },
+    {
+      "cle": "lavant-du-souffle",
+      "numero": 42,
+      "code": "Ø–A'",
+      "nom": "L'Avant du Souffle",
+      "symbole": "∅°",
+      "famille": "vide",
+      "fonction_narratologique": "Le vide précède l'appel",
+      "fonction_symbolique": "Gestation, attente active",
+      "primitives": [
+        "Ø",
+        "A'"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 39
+    },
+    {
+      "cle": "la-fracture-silencieuse",
+      "numero": 43,
+      "code": "Ø–SH",
+      "nom": "La Fracture Silencieuse",
+      "symbole": "∅⚡",
+      "famille": "vide",
+      "fonction_narratologique": "Une rupture s'annonce dans le silence",
+      "fonction_symbolique": "Cassure invisible, tension avant l'éclat",
+      "primitives": [
+        "Ø",
+        "SH"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 40
+    },
+    {
+      "cle": "leau-immobile",
+      "numero": 44,
+      "code": "Ø–M",
+      "nom": "L'Eau Immobile",
+      "symbole": "∅~",
+      "famille": "vide",
+      "fonction_narratologique": "Le flux s'arrête, la mémoire se fige",
+      "fonction_symbolique": "Suspension émotionnelle, lac intérieur",
+      "primitives": [
+        "Ø",
+        "M"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 41
+    },
+    {
+      "cle": "la-vision-du-neant",
+      "numero": 45,
+      "code": "Ø–Ψ",
+      "nom": "La Vision du Néant",
+      "symbole": "∅👁",
+      "famille": "vide",
+      "fonction_narratologique": "Une vision se forme à travers le vide",
+      "fonction_symbolique": "Clairvoyance sans objet, conscience pure",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 42
+    },
+    {
+      "cle": "le-double-vide",
+      "numero": 46,
+      "code": "Ø–Ø",
+      "nom": "Le Double Vide",
+      "symbole": "∅∅",
+      "famille": "vide",
+      "fonction_narratologique": "Suspension totale de deux systèmes simultanément",
+      "fonction_symbolique": "Effacement profond, reset symbolique",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 43
+    },
+    {
+      "cle": "le-vide-fertile",
+      "numero": 47,
+      "code": "Ø–G",
+      "nom": "Le Vide Fertile",
+      "symbole": "∅🌱",
+      "famille": "vide",
+      "fonction_narratologique": "Le vide devient germe",
+      "fonction_symbolique": "Potentiel absolu, création ex nihilo",
+      "primitives": [
+        "Ø",
+        "G"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 44
+    },
+    {
+      "cle": "le-socle-erode",
+      "code": "B–Ø↓",
+      "nom": "Le Socle Érodé",
+      "symbole": "🧱∅↓",
+      "famille": "vide",
+      "fonction_narratologique": "Une structure se vide sans se transformer ; rien ne germe dans ce qui s'effrite",
+      "fonction_symbolique": "Entropie, perte sèche, usure : la dissipation qui n'est ni purification ni passage",
+      "primitives": [
+        "B",
+        "Ø"
+      ],
+      "diathese": "sterile",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 45
+    },
+    {
+      "cle": "le-motif-qui-revient",
+      "numero": 48,
+      "code": "♾",
+      "nom": "Le Motif qui Revient",
+      "symbole": "🌀 / ∞",
+      "famille": "fractales",
+      "fonction_narratologique": "Un élément passé refait surface sous une autre forme",
+      "fonction_symbolique": "Fractale basique, effet miroir",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 46
+    },
+    {
+      "cle": "la-memoire-fluctuante",
+      "numero": 49,
+      "code": "🧠",
+      "nom": "La Mémoire Fluctuante",
+      "symbole": "🧠 / onde floue",
+      "famille": "fractales",
+      "fonction_narratologique": "Un souvenir revient altéré, modifiant la perception du présent",
+      "fonction_symbolique": "Altération douce, souvenir déplacé",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 47
+    },
+    {
+      "cle": "la-boucle-inachevee",
+      "numero": 50,
+      "code": "🔁",
+      "nom": "La Boucle Inachevée",
+      "symbole": "🔄 / cercle brisé",
+      "famille": "fractales",
+      "fonction_narratologique": "Une séquence non résolue tente de se rejouer",
+      "fonction_symbolique": "Appel à conclure ou à réouvrir",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 48
+    },
+    {
+      "cle": "le-passe-reecrit",
+      "numero": 51,
+      "code": "📜",
+      "nom": "Le Passé Réécrit",
+      "symbole": "📜 / parchemin",
+      "famille": "fractales",
+      "fonction_narratologique": "Une version alternative du passé s'impose dans le récit",
+      "fonction_symbolique": "Réécriture symbolique, faille temporelle",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 49
+    },
+    {
+      "cle": "lombre-qui-ressurgit",
+      "numero": 52,
+      "code": "🌑",
+      "nom": "L'Ombre qui Ressurgit",
+      "symbole": "🌑 / lune noire",
+      "famille": "fractales",
+      "fonction_narratologique": "Un élément enfoui, refoulé ou nié refait surface",
+      "fonction_symbolique": "Fractale obscure, résurgence inconsciente",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 50
+    },
+    {
+      "cle": "l-attracteur",
+      "code": "Rr–B",
+      "nom": "L'Attracteur",
+      "symbole": "🌀🧱 / ⊙",
+      "famille": "fractales",
+      "fonction_narratologique": "Le motif ne revient pas par écho : le paysage lui-même reconduit toute trajectoire vers le même creux",
+      "fonction_symbolique": "Bassin d'attraction ; la répétition structurelle, qu'aucune volonté ponctuelle ne suffit à quitter",
+      "primitives": [
+        "Rr",
+        "B"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 51
+    },
+    {
+      "cle": "l-il-du-dedans",
+      "numero": 55,
+      "code": "Ψ",
+      "nom": "L'Œil du Dedans",
+      "symbole": "👁 / ◉",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Une vérité symbolique cachée est perçue sans être encore dite",
+      "fonction_symbolique": "Vision intérieure, éveil sans forme",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 52
+    },
+    {
+      "cle": "le-pressentiment",
+      "numero": 56,
+      "code": "A'–Ψ",
+      "nom": "Le Pressentiment",
+      "symbole": "souffle–œil",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Un futur possible se laisse sentir par l'intuition",
+      "fonction_symbolique": "Révélation flottante, prophétie latente",
+      "primitives": [
+        "A'",
+        "Ψ"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 53
+    },
+    {
+      "cle": "limage-qui-se-repete",
+      "numero": 59,
+      "code": "Ψ–Rr",
+      "nom": "L'Image qui se Répète",
+      "symbole": "Ψ🔁",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Une scène revient dans plusieurs cycles",
+      "fonction_symbolique": "Répétition consciente, motif illuminé",
+      "primitives": [
+        "Ψ",
+        "Rr"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 54
+    },
+    {
+      "cle": "la-synchronicite-silencieuse",
+      "numero": 60,
+      "code": "N–Ψ",
+      "nom": "La Synchronicité Silencieuse",
+      "symbole": "🔗👁",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Plusieurs trajectoires convergent par intuition commune",
+      "fonction_symbolique": "Résonance collective, alignement caché",
+      "primitives": [
+        "N",
+        "Ψ"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 55
+    },
+    {
+      "cle": "leclat-du-double-regard",
+      "numero": 61,
+      "code": "Ψ–Ψ",
+      "nom": "L'Éclat du Double Regard",
+      "symbole": "👁👁",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Une double perception traverse une illusion",
+      "fonction_symbolique": "Vision paradoxale, clairvoyance en tension",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 56
+    },
+    {
+      "cle": "leclair-du-reel",
+      "numero": 64,
+      "code": "Ψ–Xh",
+      "nom": "L'Éclair du Réel",
+      "symbole": "Ψ⚡",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Ce que l'on refuse de voir surgit brusquement",
+      "fonction_symbolique": "Révélation brutale, lucidité tranchante",
+      "primitives": [
+        "Ψ",
+        "Xh"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 57
+    },
+    {
+      "cle": "l-il-ancre",
+      "numero": 65,
+      "code": "Ψ–B",
+      "nom": "L'Œil Ancré",
+      "symbole": "Ψ🧱",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Une intuition permet de structurer une situation instable",
+      "fonction_symbolique": "Perception incarnée, discernement stabilisateur",
+      "primitives": [
+        "Ψ",
+        "B"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 58
+    },
+    {
+      "cle": "la-clarte-du-vide",
+      "numero": 67,
+      "code": "Ψ–Ø–Ψ",
+      "nom": "La Clarté du Vide",
+      "symbole": "👁∅👁",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Une révélation se fait uniquement à travers le silence",
+      "fonction_symbolique": "Vérité indicible, compréhension au-delà du langage",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 59
+    },
+    {
+      "cle": "linitiation-par-la-vision",
+      "numero": 68,
+      "code": "Ψ–SH–Ψ",
+      "nom": "L'Initiation par la Vision",
+      "symbole": "👁🔥👁",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Un joueur devient vecteur conscient d'un retournement",
+      "fonction_symbolique": "Vision initiatique, bascule du récit",
+      "primitives": [
+        "Ψ",
+        "SH",
+        "Ψ"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 60
+    },
+    {
+      "cle": "la-vision-graine",
+      "numero": 69,
+      "code": "Ψ–A'–G",
+      "nom": "La Vision Graine",
+      "symbole": "👁–souffle–🌱",
+      "famille": "visionnaires",
+      "fonction_narratologique": "Une intuition ouvre un nouveau chemin encore vierge",
+      "fonction_symbolique": "Nouveau cycle, inspiration fertile, oracle incarné",
+      "primitives": [
+        "Ψ",
+        "A'",
+        "G"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 61
+    },
+    {
+      "cle": "la-mue-silencieuse",
+      "numero": 70,
+      "code": "EVO-70",
+      "nom": "La Mue Silencieuse",
+      "symbole": "🦋 / ∅🌀",
+      "famille": "evolution",
+      "fonction_narratologique": "Le joueur change d'état intérieur sans le verbaliser",
+      "fonction_symbolique": "Mutation invisible, effet différé",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 62
+    },
+    {
+      "cle": "le-passage-de-seuil",
+      "numero": 71,
+      "code": "EVO-71",
+      "nom": "Le Passage de Seuil",
+      "symbole": "🚪 / ∅→∞",
+      "famille": "evolution",
+      "fonction_narratologique": "Le récit entre dans une nouvelle phase symbolique",
+      "fonction_symbolique": "Active une carte Origine ou Vide en cascade",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 63
+    },
+    {
+      "cle": "le-changement-dalignement",
+      "numero": 72,
+      "code": "EVO-72",
+      "nom": "Le Changement d'Alignement",
+      "symbole": "🧭 / ↻",
+      "famille": "evolution",
+      "fonction_narratologique": "Le joueur modifie sa trajectoire narrative",
+      "fonction_symbolique": "Peut entraîner un changement d'archétype",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 64
+    },
+    {
+      "cle": "la-vision-incarnee",
+      "numero": 73,
+      "code": "EVO-73",
+      "nom": "La Vision Incarnée",
+      "symbole": "👁🧱 / Ψ–B",
+      "famille": "evolution",
+      "fonction_narratologique": "Une intuition profonde devient action ou ancrage",
+      "fonction_symbolique": "Fusion Vision/Action, potentiel → acte",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 65
+    },
+    {
+      "cle": "la-dissolution-creatrice",
+      "numero": 74,
+      "code": "EVO-74",
+      "nom": "La Dissolution Créatrice",
+      "symbole": "🌊∅ / M–Ø",
+      "famille": "evolution",
+      "fonction_narratologique": "Une boucle est laissée inachevée pour faire place à l'inconnu",
+      "fonction_symbolique": "Libération d'un arc narratif figé",
+      "primitives": [],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 66
+    },
+    {
+      "cle": "l-ecart-nu",
+      "code": "IDI",
+      "nom": "L'Écart Nu",
+      "symbole": "Δ / ↗",
+      "famille": "evolution",
+      "fonction_narratologique": "La distance entre l'intention et la trajectoire effective est regardée en face, sans habillage",
+      "fonction_symbolique": "Constat agentif : le point exact où le récit vécu diverge du récit voulu",
+      "primitives": [
+        "IDI"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 67
+    },
+    {
+      "cle": "l-acte-irreversible",
+      "code": "SH↑",
+      "nom": "L'Acte Irréversible",
+      "symbole": "⚡↑",
+      "famille": "evolution",
+      "fonction_narratologique": "Le joueur est l'éclair : il provoque la rupture au lieu de l'attendre",
+      "fonction_symbolique": "Décision sans retour, voix active du feu : démission, déclaration, départ, signature",
+      "primitives": [
+        "SH"
+      ],
+      "diathese": "active",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 68
+    },
+    {
+      "cle": "le-refus",
+      "code": "Ø↑",
+      "nom": "Le Refus",
+      "symbole": "∅↑ / ⊖",
+      "famille": "evolution",
+      "fonction_narratologique": "Le joueur suspend lui-même le cycle : il retire son consentement au mouvement en cours",
+      "fonction_symbolique": "Le non comme acte fondateur ; vide choisi, frontière posée",
+      "primitives": [
+        "Ø"
+      ],
+      "diathese": "active",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 69
+    },
+    {
+      "cle": "le-noeud-des-recits",
+      "code": "N",
+      "nom": "Le Nœud des Récits",
+      "symbole": "🔗 / ⋈",
+      "famille": "couplage",
+      "fonction_narratologique": "Deux trajectoires se couplent : ce qui arrive à l'une contraint désormais l'autre",
+      "fonction_symbolique": "La relation comme système à part entière, ni toi ni l'autre : le lien lui-même",
+      "primitives": [
+        "N"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 70
+    },
+    {
+      "cle": "l-interference",
+      "code": "N–SH",
+      "nom": "L'Interférence",
+      "symbole": "🔗⚡ / ≋",
+      "famille": "couplage",
+      "fonction_narratologique": "Deux cycles entrent en collision ; leurs ondes s'amplifient ou s'annulent",
+      "fonction_symbolique": "Le conflit comme phénomène d'interférence : ni faute ni hasard, une rencontre de phases",
+      "primitives": [
+        "N",
+        "SH"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 71
+    },
+    {
+      "cle": "l-asymetrie",
+      "code": "N–B",
+      "nom": "L'Asymétrie",
+      "symbole": "🔗🧱 / ⊿",
+      "famille": "couplage",
+      "fonction_narratologique": "Dans le lien, les structures ne pèsent pas le même poids ; l'une cadre, l'autre s'ajuste",
+      "fonction_symbolique": "Pouvoir, hiérarchie, dépendance : la pente du terrain relationnel",
+      "primitives": [
+        "N",
+        "B"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 72
+    },
+    {
+      "cle": "le-lien-rompu",
+      "code": "N–Ø",
+      "nom": "Le Lien Rompu",
+      "symbole": "🔗∅ / ⊘",
+      "famille": "couplage",
+      "fonction_narratologique": "La relation se suspend ou se coupe ; le silence s'installe entre les récits",
+      "fonction_symbolique": "Rupture, retrait, trahison ressentie : le vide du lien, distinct du vide intérieur",
+      "primitives": [
+        "N",
+        "Ø"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 73
+    },
+    {
+      "cle": "la-dette",
+      "code": "N–Rr",
+      "nom": "La Dette",
+      "symbole": "🔗🔁",
+      "famille": "couplage",
+      "fonction_narratologique": "Un échange inachevé se rejoue entre les deux récits jusqu'à être soldé",
+      "fonction_symbolique": "Réciprocité suspendue : don sans retour, tort sans réparation, promesse sans acte",
+      "primitives": [
+        "N",
+        "Rr"
+      ],
+      "diathese": "moyenne",
+      "numero": null,
+      "statut": "refonte-v2",
+      "numero_v2": 74
+    },
+    {
+      "cle": "iris-a1",
+      "numero": null,
+      "code": "IRIS-A1",
+      "nom": "Activation initiale",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Débloque un portail ou une mémoire scellée",
+      "fonction_symbolique": "Ouvre un tirage verrouillé",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 75
+    },
+    {
+      "cle": "iris-a10",
+      "numero": null,
+      "code": "IRIS-A10",
+      "nom": "Harmonie collective",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Replace le joueur dans un contexte global",
+      "fonction_symbolique": "Réintégration systémique",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 76
+    },
+    {
+      "cle": "iris-a2",
+      "numero": null,
+      "code": "IRIS-A2",
+      "nom": "Résonance primordiale",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Scanne le motif de base d'un tirage",
+      "fonction_symbolique": "Détecte le thème profond",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 77
+    },
+    {
+      "cle": "iris-a3",
+      "numero": null,
+      "code": "IRIS-A3",
+      "nom": "Synchronisation temporelle",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Ajuste la lecture à \"l'instant de vérité\"",
+      "fonction_symbolique": "Fige ou accélère la révélation",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 78
+    },
+    {
+      "cle": "iris-a4",
+      "numero": null,
+      "code": "IRIS-A4",
+      "nom": "Fusion symbolique",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Combine deux cartes ou deux récits",
+      "fonction_symbolique": "Synthèse créative",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 79
+    },
+    {
+      "cle": "iris-a5",
+      "numero": null,
+      "code": "IRIS-A5",
+      "nom": "Transformation énergétique",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Dissout les polarités bloquantes",
+      "fonction_symbolique": "Libération de tension",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 80
+    },
+    {
+      "cle": "iris-a6",
+      "numero": null,
+      "code": "IRIS-A6",
+      "nom": "Convergence fractale",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Aligne plusieurs motifs dispersés",
+      "fonction_symbolique": "Création d'un nœud de cohérence",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 81
+    },
+    {
+      "cle": "iris-a7",
+      "numero": null,
+      "code": "IRIS-A7",
+      "nom": "Réseau d'éveil",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Relie plusieurs joueurs ou récits",
+      "fonction_symbolique": "Activation collective",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 82
+    },
+    {
+      "cle": "iris-a8",
+      "numero": null,
+      "code": "IRIS-A8",
+      "nom": "Pacte alchimique",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Scelle un engagement entre joueur et Oracle",
+      "fonction_symbolique": "Acte symbolique d'union",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 83
+    },
+    {
+      "cle": "iris-a9",
+      "numero": null,
+      "code": "IRIS-A9",
+      "nom": "Ouverture évolutive",
+      "symbole": "✦",
+      "famille": "iris",
+      "fonction_narratologique": "Fait surgir une carte cachée",
+      "fonction_symbolique": "Révélation spontanée",
+      "primitives": [
+        "IRIS"
+      ],
+      "diathese": "moyenne",
+      "statut": "original",
+      "numero_v2": 84
+    }
+  ],
+  "schema_log_tirage": {
+    "description": "Champs à enregistrer pour chaque tirage réel (validation empirique + futur IRIS-Memory)",
+    "champs": {
+      "id_tirage": "string — identifiant unique",
+      "date": "ISO 8601",
+      "question": "string — formulation du consultant",
+      "spread": "string — ex. cycle-5 (Nœud, Bifurcation, Résonance, Ancrage, Miroir)",
+      "cartes_tirees": "array — clés des cartes, dans l'ordre des positions",
+      "deck_version": "string — 1.x (original) ou 2.0.0-refonte",
+      "dimension_non_couverte": "string|null — aspect de la situation que le deck n'a pas su nommer",
+      "carte_forcee": "string|null — clé d'une carte surinterprétée pour coller à la situation",
+      "nouvelles_cartes_activees": "array — clés des cartes refonte-v2 apparues",
+      "pertinence_ressentie": "integer 1-5 — évaluation du consultant",
+      "notes": "string — observations libres"
+    }
+  }
+}
