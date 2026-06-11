@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fractales du Destin — deck v2",
+  "type": "object",
+  "required": [
+    "_meta",
+    "familles",
+    "cartes",
+    "schema_log_tirage"
+  ],
+  "properties": {
+    "_meta": {
+      "type": "object",
+      "required": [
+        "version",
+        "total_cartes",
+        "regles_diathese"
+      ]
+    },
+    "familles": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "nom",
+          "symbole",
+          "fonction",
+          "nb_cartes"
+        ]
+      }
+    },
+    "cartes": {
+      "type": "array",
+      "minItems": 84,
+      "maxItems": 84,
+      "items": {
+        "type": "object",
+        "required": [
+          "cle",
+          "nom",
+          "famille",
+          "symbole",
+          "fonction_narratologique",
+          "fonction_symbolique",
+          "diathese",
+          "statut",
+          "numero_v2"
+        ],
+        "properties": {
+          "cle": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "numero": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "numero_v2": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 84
+          },
+          "code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nom": {
+            "type": "string"
+          },
+          "symbole": {
+            "type": "string"
+          },
+          "famille": {
+            "enum": [
+              "origines",
+              "transformation",
+              "flux",
+              "ancrage",
+              "vide",
+              "fractales",
+              "visionnaires",
+              "evolution",
+              "couplage",
+              "iris"
+            ]
+          },
+          "fonction_narratologique": {
+            "type": "string"
+          },
+          "fonction_symbolique": {
+            "type": "string"
+          },
+          "primitives": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "diathese": {
+            "enum": [
+              "moyenne",
+              "active",
+              "sterile"
+            ]
+          },
+          "statut": {
+            "enum": [
+              "original",
+              "refonte-v2"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
