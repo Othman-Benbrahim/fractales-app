@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fractales du Destin — Oracle Algorithmique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --encre:#191731; --encre-2:#221f40; --ivoire:#ece7da; --ivoire-2:#b7b2a6;
+  --f-origines:#9ad1d4; --f-transformation:#e2574c; --f-flux:#5b8dd9;
+  --f-ancrage:#b3895a; --f-vide:#8a8696; --f-fractales:#b27fd1;
+  --f-visionnaires:#e0b94f; --f-evolution:#67c39a; --f-couplage:#e08bb0; --f-iris:#f0ead8;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--encre);color:var(--ivoire);font:300 16px/1.6 "IBM Plex Sans",sans-serif;min-height:100vh}
+header{max-width:1060px;margin:0 auto;padding:40px 24px 8px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+h1{font:500 30px "Spectral",serif;letter-spacing:.02em}
+h1 em{font-style:italic;font-weight:300;color:var(--ivoire-2)}
+.meta{font:400 12px "IBM Plex Mono",monospace;color:var(--ivoire-2)}
+.meta .ok{color:var(--f-evolution)} .meta .ko{color:var(--f-transformation)}
+main{max-width:1060px;margin:0 auto;padding:8px 24px 80px}
+.pose{display:flex;gap:12px;margin:24px 0}
+input[type=text],textarea,select{background:var(--encre-2);border:1px solid #3a3560;color:var(--ivoire);
+  border-radius:6px;padding:10px 14px;font:300 15px "IBM Plex Sans",sans-serif;width:100%}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--f-visionnaires);outline-offset:1px}
+button{background:transparent;border:1px solid var(--f-visionnaires);color:var(--f-visionnaires);
+  border-radius:6px;padding:10px 22px;font:500 14px "IBM Plex Mono",monospace;cursor:pointer;white-space:nowrap;
+  transition:background .15s,color .15s}
+button:not(.carte):hover{background:var(--f-visionnaires);color:var(--encre)}
+button.second:not(.carte):hover{background:var(--ivoire-2);color:var(--encre)}
+button:focus-visible{outline:2px solid var(--ivoire);outline-offset:2px}
+button:disabled{opacity:.4;cursor:default}
+button.second{border-color:var(--ivoire-2);color:var(--ivoire-2)}
+
+/* Le cercle : cinq cartes autour d'un centre vide */
+#cercle{position:relative;width:min(92vw,760px);height:min(92vw,760px);margin:56px auto 16px}
+.slot{position:absolute;width:164px;transform:translate(-50%,-50%)}
+.slot .pos-titre{font:500 11px "IBM Plex Mono",monospace;color:var(--ivoire-2);text-align:center;
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+#centre{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;
+  border:1px dashed #3a3560;border-radius:50%}
+.carte{aspect-ratio:5/8;border-radius:10px;background:var(--encre-2);border:1px solid var(--fc,#3a3560);
+  display:flex;flex-direction:column;padding:12px 10px;cursor:pointer;width:100%;overflow:hidden;
+  transition:transform .25s ease, box-shadow .25s ease}
+.carte:hover{transform:translateY(-4px);box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.carte.dos{justify-content:center;align-items:center;border-style:dashed}
+.carte.dos span{font:300 26px "Spectral",serif;color:#3a3560}
+.carte.face{animation:retourne .55s ease}
+@keyframes retourne{from{transform:rotateY(90deg)}to{transform:rotateY(0)}}
+@media (prefers-reduced-motion: reduce){.carte.face{animation:none}.carte:hover{transform:none}}
+.carte .haut{display:flex;justify-content:space-between;gap:6px;font:400 10px "IBM Plex Mono",monospace;color:var(--fc)}
+.carte .haut span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
+.carte .glyphe{text-align:center;font-size:28px;line-height:1.2;margin-top:8px;color:var(--fc);
+  white-space:nowrap;overflow:hidden;text-overflow:clip}
+.carte .silence{flex:1;min-height:24px} /* le centre blanc de la carte : volontairement vide */
+.carte .nom{font:500 15px/1.25 "Spectral",serif;text-align:center;color:var(--ivoire);
+  overflow-wrap:break-word;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.carte .sig{font:400 10px/1.3 "IBM Plex Mono",monospace;text-align:center;color:var(--fc);margin-top:5px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.carte .tag{font:400 9px "IBM Plex Mono",monospace;text-align:center;color:var(--f-visionnaires);margin-top:3px}
+
+#detail,.panneau,#journal-form{background:var(--encre-2);border:1px solid #3a3560;border-radius:10px;
+  padding:24px;margin:24px 0;display:none}
+.panneau{border-left-width:3px}
+.p-symbolique{border-left-color:var(--f-fractales)}
+.p-structurel{border-left-color:var(--f-origines)}
+.p-analytique{border-left-color:var(--f-flux)}
+.p-synthetique{border-left-color:var(--f-visionnaires)}
+.registre{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.1em;color:var(--ivoire-2);
+  text-transform:uppercase;margin-bottom:10px}
+#detail h3,.panneau h3,#journal-form h3{font:500 20px "Spectral",serif;margin-bottom:8px}
+#detail .ligne{margin:6px 0;color:var(--ivoire-2)} #detail .ligne b{color:var(--ivoire);font-weight:600}
+.texte-panneau{white-space:pre-wrap;font:300 15px/1.7 "IBM Plex Sans",sans-serif;overflow-x:auto}
+.texte-panneau .att{color:var(--ivoire-2);font-style:italic}
+.actions{display:flex;gap:12px;justify-content:center;margin:8px 0 24px;flex-wrap:wrap}
+.barre-modele{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:4px 0 8px}
+.barre-modele select{width:auto;padding:8px 12px;font:400 13px "IBM Plex Mono",monospace}
+.barre-modele button{padding:8px 14px;font-size:12px}
+.champ{margin:14px 0}
+.champ label{display:block;font:400 12px "IBM Plex Mono",monospace;color:var(--ivoire-2);margin-bottom:6px;letter-spacing:.06em}
+.note{font:400 12px "IBM Plex Mono",monospace;color:var(--ivoire-2);margin-top:10px}
+@media (max-width:680px){
+  #cercle{width:auto;height:auto;display:flex;flex-direction:column;gap:18px;align-items:center}
+  .slot{position:static;transform:none;width:200px}
+  #centre{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Fractales du Destin <em>· Oracle Algorithmique</em></h1>
+  <div class="meta">deck {{ deck_version }} · hypothèse en validation ·
+    {% if api_active %}<span class="ok">API Fantasy active — <span id="modele-courant">{{ modele }}</span></span>
+    {% else %}<span class="ko">mode dégradé : clé Fantasy absente (.env)</span>{% endif %}
+  </div>
+</header>
+<main>
+  {% if api_active %}
+  <div class="barre-modele">
+    <button id="btn-modeles" class="second">↻ Modèles disponibles</button>
+    <select id="sel-modele" style="display:none;max-width:340px"></select>
+    <button id="btn-save-modele" class="second" style="display:none">Enregistrer</button>
+    <span class="note" id="modele-note"></span>
+  </div>
+  {% endif %}
+  <div class="pose">
+    <input id="question" type="text" placeholder="Formulez la situation ou la question du consultant…" autocomplete="off">
+    <button id="btn-tirage">Tirer le cycle</button>
+  </div>
+
+  <div id="cercle" aria-live="polite"></div>
+  <div class="actions" id="actions" style="display:none">
+    <button id="btn-lecture">Lecture symbolique (Oracle)</button>
+    <button id="btn-struct" class="second">Lecture structurelle (NEXUS)</button>
+    <button id="btn-analytique" class="second">Lecture analytique (Forecast)</button>
+    <button id="btn-resonance" class="second" disabled
+      title="Exige les lectures symbolique et analytique">Carte de résonance (Trans-Échelle)</button>
+    <button id="btn-journal" class="second">Consigner ce tirage au journal</button>
+  </div>
+
+  <section id="detail" aria-live="polite"></section>
+
+  <section id="lecture" class="panneau p-symbolique">
+    <div class="registre">REGISTRE SYMBOLIQUE — fertile, heuristique, non-falsifiable</div>
+    <h3>Lecture de l'Oracle</h3>
+    <div id="lecture-texte" class="texte-panneau"></div>
+  </section>
+
+  <section id="struct" class="panneau p-structurel">
+    <div class="registre">REGISTRE STRUCTUREL — structures invariantes, double ancrage math/comportemental</div>
+    <h3>Lecture NEXUS-ARCHÊ</h3>
+    <div id="struct-texte" class="texte-panneau"></div>
+  </section>
+
+  <section id="analytique" class="panneau p-analytique">
+    <div class="registre">REGISTRE ANALYTIQUE — hypothèses falsifiables, contexte de justification</div>
+    <h3>Fiche de prédiction (Superforecasting)</h3>
+    <div id="analytique-texte" class="texte-panneau"></div>
+    <div id="fiche-zone" style="display:none;margin-top:14px">
+      <button id="btn-pred-log">Consigner la prédiction (scorable)</button>
+      <span class="note" id="pred-note"></span>
+    </div>
+  </section>
+
+  <section id="resonance" class="panneau p-synthetique">
+    <div class="registre">REGISTRE SYNTHÉTIQUE — croisement structuré, ne crée pas de vérité nouvelle</div>
+    <h3>Carte de résonance</h3>
+    <div id="resonance-texte" class="texte-panneau"></div>
+  </section>
+
+  <section id="journal-form">
+    <h3>Journal de validation empirique</h3>
+    <div class="champ"><label for="pertinence">Pertinence ressentie (1 = forcée · 5 = juste)</label>
+      <select id="pertinence"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+    <div class="champ"><label for="dim">Dimension non couverte — un aspect de la situation que le deck n'a pas su nommer ?</label>
+      <input id="dim" type="text" placeholder="Laisser vide si rien ne manquait"></div>
+    <div class="champ"><label for="forcee">Carte forcée — une carte a-t-elle dû être surinterprétée ?</label>
+      <input id="forcee" type="text" placeholder="Nom ou clé de la carte, sinon vide"></div>
+    <div class="champ"><label for="notes">Notes libres</label>
+      <textarea id="notes" rows="3"></textarea></div>
+    <button id="btn-save">Enregistrer l'entrée</button>
+    <div class="note" id="save-note"></div>
+  </section>
+</main>
+
+<script>
+const FAMC = {origines:"--f-origines",transformation:"--f-transformation",flux:"--f-flux",
+  ancrage:"--f-ancrage",vide:"--f-vide",fractales:"--f-fractales",visionnaires:"--f-visionnaires",
+  evolution:"--f-evolution",couplage:"--f-couplage",iris:"--f-iris"};
+let tirageCourant = null;
+const $ = id => document.getElementById(id);
+
+function positionsCercle(n, rPct){ // angles : sommet en haut, sens horaire
+  return Array.from({length:n},(_,i)=>{
+    const a = -Math.PI/2 + i*2*Math.PI/n;
+    return {x:50 + rPct*Math.cos(a), y:50 + rPct*Math.sin(a)};
+  });
+}
+
+function renderCercle(){
+  const cercle = $("cercle"); cercle.innerHTML = "";
+  const pts = positionsCercle(5, 36);
+  tirageCourant.positions.forEach((p,i)=>{
+    const slot = document.createElement("div");
+    slot.className = "slot";
+    slot.style.left = pts[i].x + "%"; slot.style.top = pts[i].y + "%";
+    const c = p.carte, col = `var(${FAMC[c.famille]||"--f-vide"})`;
+    slot.innerHTML = `<div class="pos-titre">${p.titre}</div>
+      <button class="carte dos" style="--fc:${col}" aria-label="Retourner la carte ${p.titre}"><span>Ø</span></button>`;
+    const dos = slot.querySelector(".carte");
+    dos.addEventListener("click", ()=>retourne(dos, p), {once:true});
+    cercle.appendChild(slot);
+  });
+  const centre = document.createElement("div");
+  centre.id = "centre"; centre.setAttribute("aria-hidden","true");
+  cercle.appendChild(centre);
+}
+
+function glypheDe(c){
+  // Certaines cartes décrivent leur symbole en mots (« souffle–flux–œil ») :
+  // on ne rend en glyphe que les segments courts non textuels, sinon le symbole de famille.
+  const brut = (c.symbole||"").split("/")[0].trim();
+  if (brut && brut.length <= 6 && !/[a-zA-Zéèêàùç]{3,}/.test(brut)) return brut;
+  return c.famille_symbole;
+}
+
+function retourne(el, p){
+  const c = p.carte, col = `var(${FAMC[c.famille]||"--f-vide"})`;
+  el.className = "carte face"; el.style.setProperty("--fc", col);
+  el.innerHTML = `<div class="haut"><span>${c.code||"—"}</span><span>${c.famille_symbole}</span></div>
+    <div class="glyphe">${glypheDe(c)}</div>
+    <div class="silence"></div>
+    <div class="nom">${c.nom}</div>
+    <div class="sig">${c.fonction_symbolique.split(";")[0].split(",")[0]}</div>
+    ${c.statut==="refonte-v2" ? '<div class="tag">refonte-v2</div>' : ''}`;
+  el.addEventListener("click", ()=>detail(p));
+  detail(p);
+}
+
+function detail(p){
+  const c = p.carte, d = $("detail");
+  d.style.display = "block";
+  d.innerHTML = `<h3>${c.nom} <span style="font:400 13px 'IBM Plex Mono',monospace;color:var(--ivoire-2)">
+      ${c.code||""} · ${c.famille_nom} · diathèse ${c.diathese}</span></h3>
+    <div class="ligne"><b>Position :</b> ${p.titre} — ${p.question}</div>
+    <div class="ligne"><b>Fonction narratologique :</b> ${c.fonction_narratologique}</div>
+    <div class="ligne"><b>Fonction symbolique :</b> ${c.fonction_symbolique}</div>`;
+}
+
+const btnModeles = $("btn-modeles");
+if(btnModeles){
+  btnModeles.addEventListener("click", async ()=>{
+    $("modele-note").textContent = "Chargement…";
+    try{
+      const r = await fetch("/api/modeles");
+      const d = await r.json();
+      if(d.erreur){ $("modele-note").textContent = d.erreur; return; }
+      const sel = $("sel-modele");
+      sel.innerHTML = d.modeles.map(m=>`<option ${m===d.modele_courant?"selected":""}>${m}</option>`).join("");
+      sel.style.display = "inline-block";
+      $("btn-save-modele").style.display = "inline-block";
+      $("modele-note").textContent = `${d.modeles.length} modèles disponibles`;
+    }catch(e){ $("modele-note").textContent = "Erreur réseau : " + e.message; }
+  });
+  $("btn-save-modele").addEventListener("click", async ()=>{
+    const modele = $("sel-modele").value;
+    const r = await fetch("/api/modele",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({modele})});
+    const d = await r.json();
+    if(d.ok){
+      $("modele-courant").textContent = d.modele;
+      $("modele-note").textContent = "Enregistré dans .env — actif immédiatement";
+    } else { $("modele-note").textContent = d.erreur || "Échec."; }
+  });
+}
+
+$("btn-tirage").addEventListener("click", async ()=>{
+  const r = await fetch("/api/tirage",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({question:$("question").value})});
+  tirageCourant = await r.json();
+  etat.symbolique = etat.structurelle = etat.analytique = etat.fiche = null;
+  ["detail","lecture","struct","analytique","resonance","journal-form"].forEach(id=>$(id).style.display="none");
+  $("fiche-zone").style.display = "none";
+  majResonance();
+  $("actions").style.display = "flex";
+  renderCercle();
+});
+
+const etat = {symbolique:null, structurelle:null, analytique:null, fiche:null};
+
+function majResonance(){
+  $("btn-resonance").disabled = !(etat.symbolique && etat.analytique);
+}
+
+async function organe(route, corps, panneauId, texteId, cle){
+  const pan = $(panneauId), txt = $(texteId);
+  pan.style.display = "block";
+  pan.scrollIntoView({behavior:"smooth", block:"nearest"});
+  txt.innerHTML = '<span class="att">Le registre compose sa lecture…</span>';
+  try{
+    const r = await fetch(route,{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(corps)});
+    const d = await r.json();
+    if(d.lecture){ etat[cle] = d.lecture; txt.textContent = d.lecture; }
+    else { txt.textContent = d.message || d.erreur || "Réponse vide."; }
+    majResonance();
+    return d;
+  }catch(e){
+    txt.textContent = "Erreur réseau : " + e.message;
+    return null;
+  }
+}
+
+$("btn-lecture").addEventListener("click", ()=> organe("/api/lecture",
+  {question:tirageCourant.question, positions:tirageCourant.positions},
+  "lecture","lecture-texte","symbolique"));
+
+$("btn-struct").addEventListener("click", ()=> organe("/api/structurelle",
+  {question:tirageCourant.question, positions:tirageCourant.positions},
+  "struct","struct-texte","structurelle"));
+
+$("btn-analytique").addEventListener("click", async ()=>{
+  const d = await organe("/api/analytique",
+    {question:tirageCourant.question},
+    "analytique","analytique-texte","analytique");
+  if(d && d.fiche){
+    etat.fiche = d.fiche;
+    $("fiche-zone").style.display = "block";
+    $("pred-note").textContent = "";
+  }
+});
+
+$("btn-resonance").addEventListener("click", ()=> organe("/api/resonance",
+  {question:tirageCourant.question, symbolique:etat.symbolique,
+   structurelle:etat.structurelle, analytique:etat.analytique},
+  "resonance","resonance-texte","resonance"));
+
+$("btn-pred-log").addEventListener("click", async ()=>{
+  const r = await fetch("/api/prediction-log",{method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({id_tirage:tirageCourant.id_tirage, fiche:etat.fiche})});
+  const d = await r.json();
+  $("pred-note").textContent = d.ok
+    ? " Prédiction consignée dans logs/predictions.jsonl (statut : ouverte)"
+    : " Échec de l'enregistrement.";
+});
+
+$("btn-journal").addEventListener("click", ()=>{ $("journal-form").style.display = "block"; });
+
+$("btn-save").addEventListener("click", async ()=>{
+  const entree = {
+    id_tirage: tirageCourant.id_tirage, date: tirageCourant.date,
+    question: tirageCourant.question, spread: tirageCourant.spread,
+    deck_version: tirageCourant.deck_version,
+    cartes_tirees: tirageCourant.positions.map(p=>p.carte.cle),
+    pertinence_ressentie: parseInt($("pertinence").value,10),
+    dimension_non_couverte: $("dim").value.trim(),
+    carte_forcee: $("forcee").value.trim(),
+    notes: $("notes").value.trim()
+  };
+  const r = await fetch("/api/log",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(entree)});
+  const data = await r.json();
+  $("save-note").textContent = data.ok ? "Entrée enregistrée dans logs/tirages.jsonl" : "Échec de l'enregistrement.";
+});
+</script>
+</body>
+</html>
